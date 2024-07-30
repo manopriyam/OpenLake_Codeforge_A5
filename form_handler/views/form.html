@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/form.css">
+    <title>Student Information Form</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        body {
+            height: 100vh; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {    
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 30px;
+            font-size: 18px;
+            padding: 20px;
+            margin: 20px;
+            width: fit-content;
+            border-radius: 5px;
+        }
+
+        form > * {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .batch, .branch {
+            align-items: flex-start;
+        }
+
+        .batches, .branches {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        input {
+            font-size: 18px;
+        }
+
+        button {
+            align-self: center;
+            padding: 10px 40px;
+            border: none;
+            border-radius: 10px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 20px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student Information Form</h1>
+    <form action="/submit-form" method="post">
+        <div class="name">
+            <label for="studentName">Student Name :</label>
+            <input type="text" id="studentName" name="studentName" required>
+        </div>
+
+        <div class="id">
+            <label for="studentId">Student ID :</label>
+            <input type="number" id="studentId" name="studentId" required>
+        </div>
+
+        <div class="branch">
+            <label>Branch :</label>
+            <div class="branches">
+                <label><input type="radio" name="branch" value="Computer Science Engineering" required> Computer Science Engineering</label>
+                <label><input type="radio" name="branch" value="Data Science and Artificial Intelligence" required> Data Science and Artificial Intelligence</label>
+                <label><input type="radio" name="branch" value="Electrical Engineering" required> Electrical Engineering</label>
+                <label><input type="radio" name="branch" value="Mechanical Engineering" required> Mechanical Engineering</label>
+                <label><input type="radio" name="branch" value="Mechatronics Engineering" required> Mechatronics Engineering</label>
+            </div>
+        </div>
+
+        <div class="batch">
+            <label>Batch :</label>
+            <div class="batches">
+                <label><input type="radio" name="batch" value="2021-25" required> Batch 2021-25 (4th Year)</label>
+                <label><input type="radio" name="batch" value="2022-26" required> Batch 2022-26 (3rd Year)</label>
+                <label><input type="radio" name="batch" value="2023-27" required> Batch 2023-27 (2nd Year)</label>
+                <label><input type="radio" name="batch" value="2024-28" required> Batch 2024-28 (1st Year)</label>
+            </div>  
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

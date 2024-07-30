@@ -1,0 +1,65 @@
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    font-size: 18px;
+    padding: 20px;
+    margin: 20px;
+    width: fit-content;
+    border-radius: 5px;
+}
+
+form > * {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.batch, .branch {
+    align-items: flex-start;
+}
+
+.batches, .branches {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+input {
+    font-size: 18px;
+}
+
+button {
+    align-self: center;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
